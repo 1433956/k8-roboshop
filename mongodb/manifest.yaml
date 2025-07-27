@@ -16,14 +16,14 @@ spec:
       tier: database
   template:
     metadata:
-    labels:
-      component: mongodb
-      project: roboshop
-      tier: database
-  spec:
-    containers:
-    - name: mongodb
-      image: raghu73/mongodb:v1
+      labels:
+        component: mongodb
+        project: roboshop
+        tier: database
+    spec:
+      containers:
+      - name: mongodb
+        image: raghu73/mongodb:v1
 
 
 ---
