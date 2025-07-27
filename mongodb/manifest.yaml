@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   name: mongodb
   namespace: roboshop
-  # deployment labels
   labels:
     component: mongodb
     project: roboshop
@@ -14,7 +13,7 @@ spec:
     matchLabels:
       component: mongodb
       project: roboshop
-      component: database
+      tier: database
   template:
     metadata:
     labels:
