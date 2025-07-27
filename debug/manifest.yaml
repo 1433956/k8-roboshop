@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: debug
+  purpose: debugging the components
+  namespace: roboshop
+spec:
+  containers:
+  - name: debug
+    image: joindevops/debug:v1
