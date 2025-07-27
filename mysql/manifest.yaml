@@ -58,7 +58,7 @@ metadata:
     tier: database
 spec:
   selector:
-    component:mysql
+    component: mysql
     project: roboshop
     tier: database
   ports:
