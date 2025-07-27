@@ -3,7 +3,6 @@ kind: Pod
 metadata:
   name: debug
   namespace: roboshop
-  purpose: debugging the components
 spec:
   containers:
   - name: debug
