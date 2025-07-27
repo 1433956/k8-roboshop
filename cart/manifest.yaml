@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: create
+  name: cart
   namespace: roboshop
   labels:
     component: cart
