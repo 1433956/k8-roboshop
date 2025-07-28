@@ -57,8 +57,6 @@ spec:
       - name: rabbitmq
         image: rabbitmq:3
         envFrom:
-        - configMap:
-            name: rabbitmq
         - secretRef:
             name: rabbitmq
 
