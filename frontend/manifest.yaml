@@ -87,35 +87,35 @@ metadata:
     component: frontend
     project: roboshop
     tier: web
-  spec:
-    replica: 1
-    selector:
-      matchLabels:
-         component: frontend
-         project: roboshop
-         tier: web
-    template:
-      metadata:
-        labels:
-          component: frontend
-          project: roboshop
-          tier: web
-      spec:
-        container:
-        - name: frontend
-          image: raghu73/frontend:v1
-          volumeMounts:
-            - name: nginx-conf
-              mountPath: /etc/nginx/nginx.conf
-              subPath: nginx.conf
-              readOnly: true
-        volumes:
+spec:
+  replica: 1
+  selector:
+    matchLabels:
+      component: frontend
+      project: roboshop
+      tier: web
+  template:
+    metadata:
+      labels:
+        component: frontend
+        project: roboshop
+        tier: web
+    spec:
+      container:
+      - name: frontend
+        image: raghu73/frontend:v1
+        volumeMounts:
         - name: nginx-conf
-          configMap:
-            name: nginx-conf
-            items:
-              - key: nginx.conf
-                path: nginx.conf
+          mountPath: /etc/nginx/nginx.conf
+          subPath: nginx.conf
+          readOnly: true
+      volumes:
+       - name: nginx-conf
+         configMap:
+          name: nginx-conf
+          items:
+            - key: nginx.conf
+              path: nginx.conf
 ---
 apiVersion: v1
 kind: Service
