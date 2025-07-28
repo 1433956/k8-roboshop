@@ -60,13 +60,11 @@ spec:
       - name: payment
         image: raghu73/payment:v1
         envFrom:
-        - secretRef:
-            name: payment
-        envFrom:
         - configMapRef:
             name: payment
         - secretRef:
             name: payment
+               
 ---
 apiVersion: v1
 kind: Service
